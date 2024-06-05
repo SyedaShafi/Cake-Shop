@@ -1,0 +1,306 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant|Homepage</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="shadow-lg rounded-lg">
+      <!-- navbar -->
+      <div class="p-2 bg-yellow-100 bg-opacity-80">
+        <button id="toggleBtn">
+          <img
+            class="lg:hidden bg-white rounded-lg"
+            height="40px"
+            width="40px"
+            src="images/menu.png"
+            alt=""
+          />
+        </button>
+      </div>
+
+      <nav
+        id="navToggle"
+        class="navbar lg:flex xl:justify-evenly lg:justify-center bg-yellow-100 bg-opacity-80 text-black"
+      >
+        <div>
+          <ul
+            class="lg:flex items-center justify-center font-bold xl:text-2xl lg:p-4"
+          >
+            <li class="mx-2 py-2 logo hidden lg:block">
+              <a href="index.html"> CAkE AND BAkE</a>
+            </li>
+            <li class="mx-2">
+              <a class="p-2 hover:bg-yellow-300 rounded-lg" href="index.html">
+                Home
+              </a>
+            </li>
+            <li class="mx-2 py-2">
+              <a class="p-2 hover:bg-yellow-300 rounded-lg" href="about_us.html"
+                >About Us</a
+              >
+            </li>
+            <li class="mx-2 py-2">
+              <a
+                class="p-2 hover:bg-yellow-300 rounded-lg"
+                href="cake_studio.html"
+              >
+                Cake Studio
+              </a>
+            </li>
+            <li class="mx-2 py-2">
+              <a
+                class="p-2 hover:bg-yellow-300 rounded-lg"
+                href="contact_us.html"
+              >
+                Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul
+            class="lg:flex items-center justify-center font-bold xl:text-2xl lg:p-4"
+          >
+            <li class="mx-2 py-2 lg:mt-6 xl:mt-4">
+              <a href="signup.html" class="p-2 hover:bg-yellow-300 rounded-lg"
+                >Signup</a
+              >
+              /
+              <a href="login.html" class="p-2 hover:bg-yellow-300 rounded-lg"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- end of navbar -->
+    </header>
+    <!-- contact -->
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-4xl font-bold text-center mb-8 logo">Contact Us</h1>
+      <hr />
+
+      <!-- Contact Information -->
+      <div class="mb-8 lg:mx-16">
+        <h2 class="text-2xl font-bold mb-4">Visit Us</h2>
+        <p class="text-gray-700">
+          <strong>Address:</strong> Shamsher Nagar, Moulvibazar, BD
+        </p>
+        <p class="text-gray-700"><strong>Phone:</strong> 01744231929</p>
+        <p class="text-gray-700">
+          <strong>Email:</strong> syedashafi4@gmail.com
+        </p>
+      </div>
+
+      <!-- Google Map -->
+      <div class="mb-8 lg:mx-16">
+        <h2 class="text-2xl font-bold mb-4">Our Location</h2>
+        <div class="w-full h-64">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29048.650519597104!2d91.75019821806896!3d24.482639260637825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3751748da9fb6127%3A0xb2779a0c3ebdafb6!2sMoulvibazar!5e0!3m2!1sen!2sbd!4v1717417238073!5m2!1sen!2sbd"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="shadow-xl transition duration-300 ease-in-out hover:scale-105"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="mb-8 lg:mx-16">
+        <h2 class="text-2xl font-bold mb-4">Contact Form</h2>
+        <form class="bg-white p-6 rounded shadow-md">
+          <div class="mb-4">
+            <label for="name" class="block text-gray-700">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              required
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="email" class="block text-gray-700">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              required
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="message" class="block text-gray-700">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="btn-color text-black font-bold mt-4 text-xl px-4 py-3 rounded transition ease-in-out duration-300 hover:scale-x-90 w-full"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- end contact -->
+
+    <footer
+      class="bg-yellow-200 lg:h-1/2 sm:h-full flex flex-col justify-evenly"
+    >
+      <div class="md:grid grid-cols-12 justify-evenly">
+        <div class="col-span-4 m-auto">
+          <ul class="lg:mb-0 sm:mb-12 ms-12">
+            <li
+              class="mt-5 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
+            >
+              <a href="cake_studio.html">Cake Studio</a>
+            </li>
+            <li
+              class="mt-5 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
+            >
+              <a href="about_us.html">About Us</a>
+            </li>
+            <li
+              class="mt-5 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
+            >
+              <a href="contact_us.html">Contact Us</a>
+            </li>
+          </ul>
+          <ul class="flex lg:mb-0 sm:mb-12 gap-4 ms-12">
+            <li
+              class="mt-5 transition ease-in-out hover:translate-y-1 hover:scale-110 hover:delay-10"
+            >
+              <img
+                height="30px"
+                width="30px"
+                src="images/facebook.png"
+                alt="facebook"
+              />
+            </li>
+
+            <li
+              class="mt-5 transition ease-in-out hover:translate-y-1 hover:scale-110 hover:delay-10"
+            >
+              <img
+                height="30px"
+                width="30px"
+                src="images/instagram.png"
+                alt="instaagram"
+              />
+            </li>
+            <li
+              class="mt-5 transition ease-in-out hover:translate-y-1 hover:scale-110 hover:delay-10"
+            >
+              <img
+                height="30px"
+                width="30px"
+                src="images/twitter.png"
+                alt="twitter"
+              />
+            </li>
+            <li
+              class="mt-5 transition ease-in-out hover:translate-y-1 hover:scale-110 hover:delay-10"
+            >
+              <img
+                height="30px"
+                width="30px"
+                src="images/linkedin.png"
+                alt="linkedin"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-span-4 m-auto">
+          <div class="lg:mb-0 sm:mb-12 ms-12 py-12">
+            <h1
+              class="font-bold text-xl mb-1 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
+            >
+              AVAILABLE TIME
+            </h1>
+            <p
+              class="py-2 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
+            >
+              <strong>Monday-Friday: </strong> 9am-10pm
+            </p>
+            <h1
+              class="py-2 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
+            >
+              <strong>Weekend:</strong> 3pm-9pm
+            </h1>
+          </div>
+        </div>
+
+        <div class="col-span-4 m-auto">
+          <ul class="flex flex-col lg:mb-0 sm:mb-12 gap-4 lg:ms-0 ms-12">
+            <li
+              class="py-2 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
+            >
+              <img
+                class="inline m-1"
+                height="20px"
+                width="20px"
+                src="images/pin.png"
+                alt=""
+              />
+
+              <a href="">
+                <strong>Address:</strong> Shamsher Nagar, Moulvibazar, Sylhet</a
+              >
+            </li>
+
+            <li
+              class="py-2 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
+            >
+              <img
+                class="inline m-1"
+                height="20px"
+                width="20px"
+                src="images/phone-call.png"
+                alt=""
+              />
+              <a href=""><strong>Phone:</strong> 01744231929</a>
+            </li>
+            <li
+              class="py-2 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
+            >
+              <img
+                class="inline m-1"
+                height="20px"
+                width="20px"
+                src="images/email.png"
+                alt=""
+              />
+              <a href=""><strong>Email:</strong> syedashafi4@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center mb-1">
+        <hr class="mb-2 border-1 border-black" />
+         <p>
+          Copyright © 2024 - All right reserved by
+          <a href="index.html" class="font-bold"> Cake and Bake</a>
+        </p>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

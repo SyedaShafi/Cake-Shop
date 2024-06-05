@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+.hero{
+    background-image: url('images/hero3.jpg');
+    background-size: cover;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    
+}
+
+ .logo {
+     font-family: 'Pacifico', cursive;
+     font-size: 2rem;
+     color: #FF69B4;
+     text-align: center;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+     margin: 1rem;
+ }
+
+ .logo:hover{
+    color: #f6067e
+ }
+
+ .logo a {
+     text-decoration: none;
+     color: inherit;
+ }
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+.form-bg{
+    background-color: #F9FAFC;
+}
+
+.logo-text-color{
+    color: #FF69B4;;
+}
+
+.logo-text-color:hover {
+     color: #f6067e
+ }
+
+.btn-color{
+    background-color: #D2B48C;
+}
+

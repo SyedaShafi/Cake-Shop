@@ -1,0 +1,384 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant|Homepage</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="hero h-screen shadow-lg rounded-lg">
+      <!-- navbar -->
+      <div class="p-2 bg-yellow-100 bg-opacity-80">
+        <button id="toggleBtn">
+          <img
+            class="lg:hidden bg-white rounded-lg"
+            height="40px"
+            width="40px"
+            src="images/menu.png"
+            alt=""
+          />
+        </button>
+      </div>
+
+      <nav
+        id="navToggle"
+        class="navbar lg:flex xl:justify-evenly lg:justify-center bg-yellow-100 bg-opacity-80 text-black"
+      >
+        <div>
+          <ul
+            class="lg:flex items-center justify-center font-bold xl:text-2xl lg:p-4"
+          >
+            <li class="mx-2 py-2 logo hidden lg:block">
+              <a href="index.html"> CAkE AND BAkE</a>
+            </li>
+            <li class="mx-2 py-2">
+              <a class="p-2 hover:bg-yellow-300 rounded-lg" href="index.html">
+                Home
+              </a>
+            </li>
+            <li class="mx-2 py-2">
+              <a class="p-2 hover:bg-yellow-300 rounded-lg" href="about_us.html"
+                >About Us</a
+              >
+            </li>
+            <li class="mx-2 py-2">
+              <a
+                class="p-2 hover:bg-yellow-300 rounded-lg"
+                href="cake_studio.html"
+              >
+                Cake Studio
+              </a>
+            </li>
+            <li class="mx-2 py-2">
+              <a
+                class="p-2 hover:bg-yellow-300 rounded-lg"
+                href="contact_us.html"
+              >
+                Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul
+            class="lg:flex items-center justify-center font-bold xl:text-2xl lg:p-4"
+          >
+            <li class="mx-2 py-2 lg:mt-6 xl:mt-4">
+              <a href="signup.html" class="p-2 hover:bg-yellow-300 rounded-lg"
+                >Signup</a
+              >
+              /
+              <a href="login.html" class="p-2 hover:bg-yellow-300 rounded-lg"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- end of navbar -->
+
+      <!-- hero -->
+      <section class="sm:mt-12 md:mt-0">
+        <div
+          class="lg:flex justify-end me-12 items-center text-gray-900 h-full lg:text-end text-center md:pb-16"
+        >
+          <div class="mt-4">
+            <h1 class="xl:text-5xl sm:text-xl font-bold mb-6">
+              Welcome to
+              <span class="xl:text-6xl sm:text-2xl logo-text-color">
+                CAkE AND BAkE</span
+              >
+            </h1>
+            <div
+              class="lg:text-2xl lg:w-96 lg:ms-auto sm:font-bold lg:font-normal"
+            >
+              <p>Making Your Occasions Memorable. Celebrating with You.</p>
+              <button
+                class="btn btn-color lg:py-4 lg:px-8 py-2 px-6 my-3 rounded-lg text-xl font-bold transition ease-in-out duration-300 hover:scale-x-110"
+              >
+                <a href="cake_studio.html"> Order Now</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end hero -->
+    </header>
+
+    <!-- review  -->
+    <div class="m-5">
+      <div>
+        <h1 class="text-2xl font-bold text-center mb-4 mt-24">
+          <span class="logo-text-color text-5xl block"> TAkE A PEEk </span
+          ><br />
+          What People Say About Us
+        </h1>
+        <hr />
+      </div>
+
+      <div class="my-12 lg:grid grid-cols-12">
+        <!-- card 1 -->
+        <div
+          class="card border-2 border-black p-12 lg:col-span-4 bg-yellow-100 rounded-lg m-2 transition ease-in-out hover:translate-y-1 hover:scale-90 delay-300 duration-300 shadow-2xl"
+        >
+          <div class="lg:flex py-4 justify-start">
+            <img
+              height="120px"
+              width="120px"
+              src="images/user.jpg"
+              alt="profile"
+              class="rounded-lg"
+            />
+            <div class="flex flex-col justify-end">
+              <div class="text-xl p-2">Name: Mr. User</div>
+              <p class="text-xl p-2">Rating: ⭐⭐⭐</p>
+            </div>
+          </div>
+          <p class="bg-yellow-200 p-6 rounded-lg bg-opacity-80 text-black">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
+            quos architecto dicta.
+          </p>
+        </div>
+        <!-- end card1 -->
+        <!-- card2 -->
+        <div
+          class="card border-2 border-black p-12 lg:col-span-4 bg-yellow-100 rounded-lg m-2 transition ease-in-out hover:translate-y-1 hover:scale-90 delay-300 duration-300 shadow-2xl"
+        >
+          <div class="lg:flex py-4 justify-start">
+            <img
+              height="120px"
+              width="120px"
+              src="images/user.jpg"
+              alt="profile"
+              class="rounded-lg"
+            />
+            <div class="flex flex-col justify-end">
+              <div class="text-xl p-2">Name: Mr. User</div>
+              <p class="text-xl p-2">Rating: ⭐⭐⭐</p>
+            </div>
+          </div>
+          <p class="bg-yellow-200 p-6 rounded-lg bg-opacity-80 text-black">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
+            quos architecto dicta.
+          </p>
+        </div>
+        <!-- end card 2 -->
+        <!-- card 3 -->
+        <div
+          class="card border-2 border-black p-12 lg:col-span-4 bg-yellow-100 rounded-lg m-2 transition ease-in-out hover:translate-y-1 hover:scale-90 delay-300 duration-300 shadow-2xl"
+        >
+          <div class="lg:flex py-4 justify-start">
+            <img
+              height="120px"
+              width="120px"
+              src="images/user.jpg"
+              alt="profile"
+              class="rounded-lg"
+            />
+            <div class="flex flex-col justify-end">
+              <div class="text-xl p-2">Name: Mr. User</div>
+              <p class="text-xl p-2">Rating: ⭐⭐⭐</p>
+            </div>
+          </div>
+          <p class="bg-yellow-200 p-6 rounded-lg bg-opacity-80 text-black">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
+            quos architecto dicta.
+          </p>
+        </div>
+        <!-- end card 3 -->
+      </div>
+    </div>
+
+    <!-- end of review -->
+
+    <!-- key features -->
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-6">Our Key Features</h2>
+      <hr class="pb-12" />
+      <div class="grid my-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center"
+        >
+          <div class="bg-indigo-100 p-4 rounded-full">
+            <img class="h-16 w-16" src="images/order.png" alt="" />
+          </div>
+          <h3 class="text-xl font-semibold mt-4">Easy to Order</h3>
+          <p class="text-gray-600 text-center mt-2">
+            Convenient and user-friendly ordering process.
+          </p>
+        </div>
+        <!-- Card 2 -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center"
+        >
+          <div class="bg-green-100 p-4 rounded-full">
+            <img class="h-16 w-16" src="images/fast-delivery.png" alt="" />
+          </div>
+          <h3 class="text-xl font-semibold mt-4">On Time Delivery</h3>
+          <p class="text-gray-600 text-center mt-2">
+            Timely delivery for all your orders.
+          </p>
+        </div>
+        <!-- Card 3 -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center"
+        >
+          <div class="bg-yellow-100 p-4 rounded-full">
+            <img class="h-16 w-16" src="images/ingredient.png" alt="" />
+          </div>
+          <h3 class="text-xl font-semibold mt-4">Quality Ingredients</h3>
+          <p class="text-gray-600 text-center mt-2">
+            We use only the finest ingredients.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- end key features -->
+
+    <footer
+      class="bg-yellow-200 lg:h-1/2 sm:h-full flex flex-col justify-evenly"
+    >
+      <div class="md:grid grid-cols-12 justify-evenly">
+        <div class="col-span-4 m-auto">
+          <ul class="lg:mb-0 sm:mb-12 ms-12">
+            <li
+              class="mt-5 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
+            >
+              <a href="cake_studio.html">Cake Studio</a>
+            </li>
+            <li
+              class="mt-5 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
+            >
+              <a href="about_us.html">About Us</a>
+            </li>
+            <li
+              class="mt-5 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
+            >
+              <a href="contact_us.html">Contact Us</a>
+            </li>
+          </ul>
+          <ul class="flex lg:mb-0 sm:mb-12 gap-4 ms-12">
+            <li
+              class="mt-5 transition ease-in-out hover:translate-y-1 hover:scale-110 hover:delay-10"
+            >
+              <img
+                height="30px"
+                width="30px"
+                src="images/facebook.png"
+                alt="facebook"
+              />
+            </li>
+
+            <li
+              class="mt-5 transition ease-in-out hover:translate-y-1 hover:scale-110 hover:delay-10"
+            >
+              <img
+                height="30px"
+                width="30px"
+                src="images/instagram.png"
+                alt="instaagram"
+              />
+            </li>
+            <li
+              class="mt-5 transition ease-in-out hover:translate-y-1 hover:scale-110 hover:delay-10"
+            >
+              <img
+                height="30px"
+                width="30px"
+                src="images/twitter.png"
+                alt="twitter"
+              />
+            </li>
+            <li
+              class="mt-5 transition ease-in-out hover:translate-y-1 hover:scale-110 hover:delay-10"
+            >
+              <img
+                height="30px"
+                width="30px"
+                src="images/linkedin.png"
+                alt="linkedin"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-span-4 m-auto">
+          <div class="lg:mb-0 sm:mb-12 ms-12 py-12">
+            <h1
+              class="font-bold text-xl mb-1 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
+            >
+              AVAILABLE TIME
+            </h1>
+            <p
+              class="py-2 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
+            >
+              <strong>Monday-Friday: </strong> 9am-10pm
+            </p>
+            <h1
+              class="py-2 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
+            >
+              <strong>Weekend:</strong> 3pm-9pm
+            </h1>
+          </div>
+        </div>
+
+        <div class="col-span-4 m-auto">
+          <ul class="flex flex-col lg:mb-0 sm:mb-12 gap-4 lg:ms-0 ms-12">
+            <li
+              class="py-2 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
+            >
+              <img
+                class="inline m-1"
+                height="20px"
+                width="20px"
+                src="images/pin.png"
+                alt=""
+              />
+
+              <a href="">
+                <strong>Address:</strong> Shamsher Nagar, Moulvibazar, Sylhet</a
+              >
+            </li>
+
+            <li
+              class="py-2 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
+            >
+              <img
+                class="inline m-1"
+                height="20px"
+                width="20px"
+                src="images/phone-call.png"
+                alt=""
+              />
+              <a href=""><strong>Phone:</strong> 01744231929</a>
+            </li>
+            <li
+              class="py-2 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
+            >
+              <img
+                class="inline m-1"
+                height="20px"
+                width="20px"
+                src="images/email.png"
+                alt=""
+              />
+              <a href=""><strong>Email:</strong> syedashafi4@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center mb-1">
+        <hr class="mb-2 border-1 border-black" />
+        <p>
+          Copyright © 2024 - All right reserved by
+          <a href="index.html" class="font-bold"> Cake and Bake</a>
+        </p>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
