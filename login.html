@@ -2,12 +2,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurant|Homepage</title>
+    <title>Cake and Bake|Login</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-     <header class="shadow-lg rounded-lg">
+    <div id="preloader"></div>
+
+    <header class="shadow-lg rounded-lg">
       <!-- navbar -->
       <div class="p-2 bg-yellow-100 bg-opacity-80">
         <button id="toggleBtn">
@@ -27,24 +29,29 @@
       >
         <div>
           <ul
-            class="lg:flex items-center justify-center font-bold xl:text-2xl lg:p-4"
+            class="lg:flex items-center justify-center font-semibold xl:text-2xl lg:p-4"
           >
             <li class="mx-2 py-2 logo hidden lg:block">
               <a href="index.html"> CAkE AND BAkE</a>
             </li>
             <li class="mx-2">
-              <a class="p-2 hover:bg-yellow-300 rounded-lg" href="index.html">
+              <a
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
+                href="index.html"
+              >
                 Home
               </a>
             </li>
             <li class="mx-2 py-2">
-              <a class="p-2 hover:bg-yellow-300 rounded-lg" href="about_us.html"
+              <a
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
+                href="about_us.html"
                 >About Us</a
               >
             </li>
             <li class="mx-2 py-2">
               <a
-                class="p-2 hover:bg-yellow-300 rounded-lg"
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
                 href="cake_studio.html"
               >
                 Cake Studio
@@ -52,7 +59,7 @@
             </li>
             <li class="mx-2 py-2">
               <a
-                class="p-2 hover:bg-yellow-300 rounded-lg"
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
                 href="contact_us.html"
               >
                 Contact Us</a
@@ -63,14 +70,18 @@
 
         <div>
           <ul
-            class="lg:flex items-center justify-center font-bold xl:text-2xl lg:p-4"
+            class="lg:flex items-center justify-center font-semibold xl:text-2xl lg:p-4"
           >
             <li class="mx-2 py-2 lg:mt-6 xl:mt-4">
-              <a href="signup.html" class="p-2 hover:bg-yellow-300 rounded-lg"
+              <a
+                href="signup.html"
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
                 >Signup</a
               >
               /
-              <a href="login.html" class="p-2 hover:bg-yellow-300 rounded-lg"
+              <a
+                href="login.html"
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
                 >Login</a
               >
             </li>
@@ -108,7 +119,7 @@
               <label
                 class="block text-black font-bold mb-3 ms-2 text-xl"
                 for="password"
-                >password</label
+                >Password</label
               >
               <input
                 type="password"
@@ -124,16 +135,15 @@
                 type="submit"
                 class="btn-color text-black font-bold mt-4 text-xl px-4 py-3 rounded transition ease-in-out duration-300 hover:scale-x-90 w-full"
               >
-             
                 Login
               </button>
             </div>
           </form>
         </div>
-        <div class="col-span-6">
+        <div class="col-span-6 hidden" id="main-content">
           <img
             src="images/login.jpg"
-            class="hidden xl:block w-full h-auto"
+            class="hidden xl:block w-full h-auto animated-img"
             alt=""
           />
         </div>
@@ -142,11 +152,11 @@
     <!-- end login form -->
 
     <footer
-      class="bg-yellow-200 lg:h-1/2 sm:h-full flex flex-col justify-evenly"
+      class="bg-yellow-800 bg-opacity-80 lg:h-1/2 sm:h-full flex flex-col justify-evenly"
     >
       <div class="md:grid grid-cols-12 justify-evenly">
         <div class="col-span-4 m-auto">
-          <ul class="lg:mb-0 sm:mb-12 ms-12">
+          <ul class="lg:mb-0 sm:mb-12 ms-12 font-semibold">
             <li
               class="mt-5 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
             >
@@ -276,12 +286,13 @@
 
       <div class="text-center mb-1">
         <hr class="mb-2 border-1 border-black" />
-       <p>
+        <p>
           Copyright © 2024 - All right reserved by
           <a href="index.html" class="font-bold"> Cake and Bake</a>
         </p>
       </div>
     </footer>
+
     <script src="app.js"></script>
   </body>
 </html>

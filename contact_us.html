@@ -2,11 +2,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurant|Homepage</title>
+    <title>Cake and Bake|Contact Us</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+        <div id="preloader"></div>
+
     <header class="shadow-lg rounded-lg">
       <!-- navbar -->
       <div class="p-2 bg-yellow-100 bg-opacity-80">
@@ -27,24 +29,24 @@
       >
         <div>
           <ul
-            class="lg:flex items-center justify-center font-bold xl:text-2xl lg:p-4"
+            class="lg:flex items-center justify-center font-semibold xl:text-2xl lg:p-4"
           >
             <li class="mx-2 py-2 logo hidden lg:block">
               <a href="index.html"> CAkE AND BAkE</a>
             </li>
             <li class="mx-2">
-              <a class="p-2 hover:bg-yellow-300 rounded-lg" href="index.html">
+              <a class="p-2 hover:bg-yellow-300 rounded-lg transition ease-in-out delay-300 duration-300 hover:bg-yellow-300" href="index.html">
                 Home
               </a>
             </li>
             <li class="mx-2 py-2">
-              <a class="p-2 hover:bg-yellow-300 rounded-lg" href="about_us.html"
+              <a class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg" href="about_us.html"
                 >About Us</a
               >
             </li>
             <li class="mx-2 py-2">
               <a
-                class="p-2 hover:bg-yellow-300 rounded-lg"
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
                 href="cake_studio.html"
               >
                 Cake Studio
@@ -52,7 +54,7 @@
             </li>
             <li class="mx-2 py-2">
               <a
-                class="p-2 hover:bg-yellow-300 rounded-lg"
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
                 href="contact_us.html"
               >
                 Contact Us</a
@@ -63,14 +65,14 @@
 
         <div>
           <ul
-            class="lg:flex items-center justify-center font-bold xl:text-2xl lg:p-4"
+            class="lg:flex items-center justify-center font-semibold xl:text-2xl lg:p-4"
           >
             <li class="mx-2 py-2 lg:mt-6 xl:mt-4">
-              <a href="signup.html" class="p-2 hover:bg-yellow-300 rounded-lg"
+              <a href="signup.html" class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
                 >Signup</a
               >
               /
-              <a href="login.html" class="p-2 hover:bg-yellow-300 rounded-lg"
+              <a href="login.html" class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
                 >Login</a
               >
             </li>
@@ -86,7 +88,7 @@
 
       <!-- Contact Information -->
       <div class="mb-8 lg:mx-16">
-        <h2 class="text-2xl font-bold mb-4">Visit Us</h2>
+        <h2 class="text-2xl font-bold mb-4 mt-5">Our Address</h2>
         <p class="text-gray-700">
           <strong>Address:</strong> Shamsher Nagar, Moulvibazar, BD
         </p>
@@ -114,7 +116,7 @@
       </div>
 
       <!-- Contact Form -->
-      <div class="mb-8 lg:mx-16">
+      <div class="lg:mx-16 my-12">
         <h2 class="text-2xl font-bold mb-4">Contact Form</h2>
         <form class="bg-white p-6 rounded shadow-md">
           <div class="mb-4">
@@ -123,7 +125,7 @@
               type="text"
               id="name"
               name="name"
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              class="w-full block border border-gray-300 hover:border-gray-600 p-3 rounded-md"
               required
             />
           </div>
@@ -134,7 +136,7 @@
               type="email"
               id="email"
               name="email"
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              class="w-full block border border-gray-300 hover:border-gray-600 p-3 rounded-md"
               required
             />
           </div>
@@ -145,7 +147,7 @@
               id="message"
               name="message"
               rows="5"
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              class="w-full block border border-gray-300 hover:border-gray-600 p-3 rounded-md"
               required
             ></textarea>
           </div>
@@ -161,11 +163,11 @@
     <!-- end contact -->
 
     <footer
-      class="bg-yellow-200 lg:h-1/2 sm:h-full flex flex-col justify-evenly"
+      class="bg-yellow-800 bg-opacity-80 lg:h-1/2 sm:h-full flex flex-col justify-evenly"
     >
       <div class="md:grid grid-cols-12 justify-evenly">
         <div class="col-span-4 m-auto">
-          <ul class="lg:mb-0 sm:mb-12 ms-12">
+          <ul class="lg:mb-0 sm:mb-12 ms-12 font-semibold">
             <li
               class="mt-5 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
             >
@@ -295,7 +297,7 @@
 
       <div class="text-center mb-1">
         <hr class="mb-2 border-1 border-black" />
-         <p>
+        <p>
           Copyright © 2024 - All right reserved by
           <a href="index.html" class="font-bold"> Cake and Bake</a>
         </p>

@@ -4,10 +4,8 @@
 .hero{
     background-image: url('images/hero3.jpg');
     background-size: cover;
-
     background-position: center;
     background-repeat: no-repeat;
-    color: white;
     
 }
 
@@ -21,7 +19,8 @@
  }
 
  .logo:hover{
-    color: #f6067e
+    color: #f6067e;
+    transition:cubic-bezier(1, 0, 0, 1) 0.5s
  }
 
  .logo a {
@@ -46,10 +45,66 @@ body{
 }
 
 .logo-text-color:hover {
-     color: #f6067e
+     color: #f6067e;
+    transition: cubic-bezier(1, 0, 0, 1) 0.5s
  }
 
 .btn-color{
     background-color: #D2B48C;
 }
+
+
+
+.animated-img{
+    opacity:0;
+    transform: translateX(-10px);
+    animation: moveright 0.8s linear forwards;
+}
+
+
+@keyframes moveright {
+        100%{
+            opacity:1;
+            transform: translateX(30px);
+        }
+}
+
+.animated-img-about{
+    opacity:0;
+    transform: translateX(-30px);
+    animation: moveToZero 0.8s linear forwards;
+}
+
+
+@keyframes moveToZero {
+        100%{
+            opacity:1;
+            transform: translateX(0px);
+        }
+}
+
+.animated-img-hero{
+    opacity:0;
+    transform: translateY(-30px);
+    animation: moveHero 0.8s linear forwards;
+}
+
+
+@keyframes moveHero {
+        100%{
+            opacity:1;
+            transform: translateY(0px);
+        }
+}
+
+
+#preloader{
+    background:#FEFEFF url('images/preloader.gif') no-repeat center;
+    background-size: 30%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
 

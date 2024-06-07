@@ -2,11 +2,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurant|Homepage</title>
+    <title>Cake and Bake|Cake Studio</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+    <div id="preloader"></div>
+
     <header class="shadow-lg rounded-lg">
       <!-- navbar -->
       <div class="p-2 bg-yellow-100 bg-opacity-80">
@@ -27,24 +29,29 @@
       >
         <div>
           <ul
-            class="lg:flex items-center justify-center font-bold xl:text-2xl lg:p-4"
+            class="lg:flex items-center justify-center font-semibold xl:text-2xl lg:p-4"
           >
             <li class="mx-2 py-2 logo hidden lg:block">
               <a href="index.html"> CAkE AND BAkE</a>
             </li>
             <li class="mx-2">
-              <a class="p-2 hover:bg-yellow-300 rounded-lg" href="index.html">
+              <a
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
+                href="index.html"
+              >
                 Home
               </a>
             </li>
             <li class="mx-2 py-2">
-              <a class="p-2 hover:bg-yellow-300 rounded-lg" href="about_us.html"
+              <a
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
+                href="about_us.html"
                 >About Us</a
               >
             </li>
             <li class="mx-2 py-2">
               <a
-                class="p-2 hover:bg-yellow-300 rounded-lg"
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
                 href="cake_studio.html"
               >
                 Cake Studio
@@ -52,7 +59,7 @@
             </li>
             <li class="mx-2 py-2">
               <a
-                class="p-2 hover:bg-yellow-300 rounded-lg"
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
                 href="contact_us.html"
               >
                 Contact Us</a
@@ -63,14 +70,18 @@
 
         <div>
           <ul
-            class="lg:flex items-center justify-center font-bold xl:text-2xl lg:p-4"
+            class="lg:flex items-center justify-center font-semibold xl:text-2xl lg:p-4"
           >
             <li class="mx-2 py-2 lg:mt-6 xl:mt-4">
-              <a href="signup.html" class="p-2 hover:bg-yellow-300 rounded-lg"
+              <a
+                href="signup.html"
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
                 >Signup</a
               >
               /
-              <a href="login.html" class="p-2 hover:bg-yellow-300 rounded-lg"
+              <a
+                href="login.html"
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
                 >Login</a
               >
             </li>
@@ -86,215 +97,240 @@
         Our Cake Studio
       </h1>
 
-      <div class="md:m-12 m-4 lg:grid grid-cols-4 gap-4">
+      <div class="md:m-12 m-4 lg:grid grid-cols-3 gap-12">
         <!-- card1 -->
-        <div class="p-2 my-4 border border-black rounded-xl bg-yellow-100">
+        <div
+          class="my-4 rounded-xl bg-stone-100 border-1 transition ease-in-out duration-300 delay-300 hover:border-black hover:drop-shadow-2xl"
+        >
           <img
             class="h-64 md:h-80 w-full rounded-t-xl"
             src="images/cake1.jpg"
             alt=""
           />
           <div
-            class="w-full p-1 bg-green-200 rounded-b-xl text-center font-bold"
+            class="w-full p-1 bg-amber-300 rounded-b-xl text-center font-bold"
           >
             Same Day Delivery
           </div>
-          <div class="py-3 text-center">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam odio ut cupiditate!
-            </p>
-            <h1 class="font-bold">Price: 1200tk</h1>
-          </div>
-          <div>
-            <label
-              for="cake-size"
-              class="block text-sm font-medium p-1 text-gray-800"
-              >Select Cake Size</label
+          <div class="p-4">
+            <div class="py-3 text-center">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam odio ut cupiditate!
+              </p>
+              <h1 class="text-xl font-semibold p-3">Price: 1200tk</h1>
+              <hr />
+            </div>
+            <div>
+              <label
+                for="cake-size"
+                class="block text-sm font-medium p-1 text-gray-800"
+                >Select Cake Size</label
+              >
+              <select
+                id="cake-size"
+                name="cake-size"
+                class="mt-1 block w-full bg-stone-100 border-2 pl-3 pr-10 py-2 text-base border-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+              >
+                <option>Small (1kg)</option>
+                <option>Medium (1.5kg)</option>
+                <option>Large (2kg)</option>
+              </select>
+            </div>
+            <button
+              class="btn border border-black rounded my-3 px-4 py-2 font-bold transition ease-in-out duration-300 hover:scale-x-90"
             >
-            <select
-              id="cake-size"
-              name="cake-size"
-              class="mt-1 block w-full bg-yellow-100 border-2 pl-3 pr-10 py-2 text-base border-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-            >
-              <option>Small (1kg)</option>
-              <option>Medium (1.5kg)</option>
-              <option>Large (2kg)</option>
-            </select>
+              <a href="">Purchase Now</a>
+            </button>
           </div>
-          <button
-            class="btn border border-black rounded my-3 px-4 py-2 font-bold transition ease-in-out duration-300 hover:scale-x-90"
-          >
-            <a href="">Purchase Now</a>
-          </button>
         </div>
         <!-- end card1 -->
         <!-- card2 -->
-        <div class="p-2 my-4 bg-yellow-100 border border-black rounded-xl">
+        <div
+          class="my-4 rounded-xl bg-stone-100 border-1 transition ease-in-out duration-300 delay-300 hover:border-black hover:drop-shadow-2xl"
+        >
           <img
             class="h-64 md:h-80 w-full rounded-t-xl"
             src="images/cake1.jpg"
             alt=""
           />
           <div
-            class="w-full p-1 bg-green-300 rounded-b-xl text-center font-bold"
+            class="w-full p-1 bg-amber-500 rounded-b-xl text-center font-bold"
           >
             Next Day Delivery
           </div>
-          <div class="py-3 text-center">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam odio ut cupiditate!
-            </p>
-            <h1 class="font-bold">Price: 1200tk</h1>
-          </div>
-          <div>
-            <label
-              for="cake-size"
-              class="block text-sm font-medium p-1 text-gray-800"
-              >Select Cake Size</label
+          <div class="p-4">
+            <div class="py-3 text-center">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam odio ut cupiditate!
+              </p>
+              <h1 class="text-xl font-semibold p-3">Price: 1200tk</h1>
+              <hr />
+            </div>
+            <div>
+              <label
+                for="cake-size"
+                class="block text-sm font-medium p-1 text-gray-800"
+                >Select Cake Size</label
+              >
+              <select
+                id="cake-size"
+                name="cake-size"
+                class="mt-1 block w-full bg-stone-100 border-2 pl-3 pr-10 py-2 text-base border-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+              >
+                <option>Small (1kg)</option>
+                <option>Medium (1.5kg)</option>
+                <option>Large (2kg)</option>
+              </select>
+            </div>
+            <button
+              class="btn border border-black rounded my-3 px-4 py-2 font-bold transition ease-in-out duration-300 hover:scale-x-90"
             >
-            <select
-              id="cake-size"
-              name="cake-size"
-              class="mt-1 block w-full bg-yellow-100 border-2 pl-3 pr-10 py-2 text-base border-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-            >
-              <option>Small (1kg)</option>
-              <option>Medium (1.5kg)</option>
-              <option>Large (2kg)</option>
-            </select>
+              <a href="">Purchase Now</a>
+            </button>
           </div>
-          <button
-            class="btn border border-black rounded my-3 px-4 py-2 font-bold transition ease-in-out duration-300 hover:scale-x-90"
-          >
-            <a href="">Purchase Now</a>
-          </button>
         </div>
         <!-- end card2 -->
         <!-- card3 -->
-        <div class="p-2 my-4 border border-black rounded-xl bg-yellow-100">
+        <div
+          class="my-4 rounded-xl bg-stone-100 border-1 transition ease-in-out duration-300 delay-300 hover:border-black hover:drop-shadow-2xl"
+        >
           <img
             class="h-64 md:h-80 w-full rounded-t-xl"
             src="images/cake1.jpg"
             alt=""
           />
           <div
-            class="w-full p-1 bg-green-200 rounded-b-xl text-center font-bold"
+            class="w-full p-1 bg-amber-300 rounded-b-xl text-center font-bold"
           >
             Same Day Delivery
           </div>
-          <div class="py-3 text-center">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam odio ut cupiditate!
-            </p>
-            <h1 class="font-bold">Price: 1200tk</h1>
-          </div>
-          <div>
-            <label
-              for="cake-size"
-              class="block text-sm font-medium p-1 text-gray-800"
-              >Select Cake Size</label
+          <div class="p-4">
+            <div class="py-3 text-center">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam odio ut cupiditate!
+              </p>
+              <h1 class="text-xl font-semibold p-3">Price: 1200tk</h1>
+              <hr />
+            </div>
+            <div>
+              <label
+                for="cake-size"
+                class="block text-sm font-medium p-1 text-gray-800"
+                >Select Cake Size</label
+              >
+              <select
+                id="cake-size"
+                name="cake-size"
+                class="mt-1 block w-full bg-stone-100 border-2 pl-3 pr-10 py-2 text-base border-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+              >
+                <option>Small (1kg)</option>
+                <option>Medium (1.5kg)</option>
+                <option>Large (2kg)</option>
+              </select>
+            </div>
+            <button
+              class="btn border border-black rounded my-3 px-4 py-2 font-bold transition ease-in-out duration-300 hover:scale-x-90"
             >
-            <select
-              id="cake-size"
-              name="cake-size"
-              class="mt-1 block w-full bg-yellow-100 border-2 pl-3 pr-10 py-2 text-base border-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-            >
-              <option>Small (1kg)</option>
-              <option>Medium (1.5kg)</option>
-              <option>Large (2kg)</option>
-            </select>
+              <a href="">Purchase Now</a>
+            </button>
           </div>
-          <button
-            class="btn border border-black rounded my-3 px-4 py-2 font-bold transition ease-in-out duration-300 hover:scale-x-90"
-          >
-            <a href="">Purchase Now</a>
-          </button>
         </div>
         <!-- end card3 -->
         <!-- card4 -->
-        <div class="p-2 my-4 border border-black rounded-xl bg-yellow-100">
+        <div
+          class="my-4 rounded-xl bg-stone-100 border-1 transition ease-in-out duration-300 delay-300 hover:border-black hover:drop-shadow-2xl"
+        >
           <img
             class="h-64 md:h-80 w-full rounded-t-xl"
             src="images/cake1.jpg"
             alt=""
           />
           <div
-            class="w-full p-1 bg-green-200 rounded-b-xl text-center font-bold"
+            class="w-full p-1 bg-amber-300 rounded-b-xl text-center font-bold"
           >
             Same Day Delivery
           </div>
-          <div class="py-3 text-center">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam odio ut cupiditate!
-            </p>
-            <h1 class="font-bold">Price: 1200tk</h1>
-          </div>
-          <div>
-            <label
-              for="cake-size"
-              class="block text-sm font-medium p-1 text-gray-800"
-              >Select Cake Size</label
+          <div class="p-4">
+            <div class="py-3 text-center">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam odio ut cupiditate!
+              </p>
+              <h1 class="text-xl font-semibold p-3">Price: 1200tk</h1>
+              <hr />
+            </div>
+            <div>
+              <label
+                for="cake-size"
+                class="block text-sm font-medium p-1 text-gray-800"
+                >Select Cake Size</label
+              >
+              <select
+                id="cake-size"
+                name="cake-size"
+                class="mt-1 block w-full bg-stone-100 border-2 pl-3 pr-10 py-2 text-base border-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+              >
+                <option>Small (1kg)</option>
+                <option>Medium (1.5kg)</option>
+                <option>Large (2kg)</option>
+              </select>
+            </div>
+            <button
+              class="btn border border-black rounded my-3 px-4 py-2 font-bold transition ease-in-out duration-300 hover:scale-x-90"
             >
-            <select
-              id="cake-size"
-              name="cake-size"
-              class="mt-1 block w-full bg-yellow-100 border-2 pl-3 pr-10 py-2 text-base border-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-            >
-              <option>Small (1kg)</option>
-              <option>Medium (1.5kg)</option>
-              <option>Large (2kg)</option>
-            </select>
+              <a href="">Purchase Now</a>
+            </button>
           </div>
-          <button
-            class="btn border border-black rounded my-3 px-4 py-2 font-bold transition ease-in-out duration-300 hover:scale-x-90"
-          >
-            <a href="">Purchase Now</a>
-          </button>
         </div>
         <!-- end card4 -->
         <!-- card5 -->
-        <div class="p-2 my-4 bg-yellow-100 border border-black rounded-xl">
+        <div
+          class="my-4 rounded-xl bg-stone-100 border-1 transition ease-in-out duration-300 delay-300 hover:border-black hover:drop-shadow-2xl"
+        >
           <img
             class="h-64 md:h-80 w-full rounded-t-xl"
             src="images/cake1.jpg"
             alt=""
           />
           <div
-            class="w-full p-1 bg-green-300 rounded-b-xl text-center font-bold"
+            class="w-full p-1 bg-amber-300 rounded-b-xl text-center font-bold"
           >
-            Next Day Delivery
+            Same Day Delivery
           </div>
-          <div class="py-3 text-center">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam odio ut cupiditate!
-            </p>
-            <h1 class="font-bold">Price: 1200tk</h1>
-          </div>
-          <div>
-            <label
-              for="cake-size"
-              class="block text-sm font-medium p-1 text-gray-800"
-              >Select Cake Size</label
+          <div class="p-4">
+            <div class="py-3 text-center">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam odio ut cupiditate!
+              </p>
+              <h1 class="text-xl font-semibold p-3">Price: 1200tk</h1>
+              <hr />
+            </div>
+            <div>
+              <label
+                for="cake-size"
+                class="block text-sm font-medium p-1 text-gray-800"
+                >Select Cake Size</label
+              >
+              <select
+                id="cake-size"
+                name="cake-size"
+                class="mt-1 block w-full bg-stone-100 border-2 pl-3 pr-10 py-2 text-base border-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+              >
+                <option>Small (1kg)</option>
+                <option>Medium (1.5kg)</option>
+                <option>Large (2kg)</option>
+              </select>
+            </div>
+            <button
+              class="btn border border-black rounded my-3 px-4 py-2 font-bold transition ease-in-out duration-300 hover:scale-x-90"
             >
-            <select
-              id="cake-size"
-              name="cake-size"
-              class="mt-1 block w-full bg-yellow-100 border-2 pl-3 pr-10 py-2 text-base border-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-            >
-              <option>Small (1kg)</option>
-              <option>Medium (1.5kg)</option>
-              <option>Large (2kg)</option>
-            </select>
+              <a href="">Purchase Now</a>
+            </button>
           </div>
-          <button
-            class="btn border border-black rounded my-3 px-4 py-2 font-bold transition ease-in-out duration-300 hover:scale-x-90"
-          >
-            <a href="">Purchase Now</a>
-          </button>
         </div>
         <!-- end card5 -->
       </div>
@@ -302,11 +338,11 @@
     <!-- end card container -->
 
     <footer
-      class="bg-yellow-200 lg:h-1/2 sm:h-full flex flex-col justify-evenly"
+      class="bg-yellow-800 bg-opacity-80 lg:h-1/2 sm:h-full flex flex-col justify-evenly"
     >
       <div class="md:grid grid-cols-12 justify-evenly">
         <div class="col-span-4 m-auto">
-          <ul class="lg:mb-0 sm:mb-12 ms-12">
+          <ul class="lg:mb-0 sm:mb-12 ms-12 font-semibold">
             <li
               class="mt-5 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
             >

@@ -2,12 +2,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurant|Homepage</title>
+    <title>Cake and Bake|Homepage</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <header class="hero h-screen shadow-lg rounded-lg">
+    <div id="preloader"></div>
+    <header style="height: 90vh" class="hero shadow-lg rounded-lg">
       <!-- navbar -->
       <div class="p-2 bg-yellow-100 bg-opacity-80">
         <button id="toggleBtn">
@@ -23,28 +30,33 @@
 
       <nav
         id="navToggle"
-        class="navbar lg:flex xl:justify-evenly lg:justify-center bg-yellow-100 bg-opacity-80 text-black"
+        class="navbar lg:flex xl:justify-evenly lg:justify-center bg-yellow-100 bg-opacity-70 text-black"
       >
         <div>
           <ul
-            class="lg:flex items-center justify-center font-bold xl:text-2xl lg:p-4"
+            class="lg:flex items-center justify-center font-semibold xl:text-2xl lg:p-4"
           >
             <li class="mx-2 py-2 logo hidden lg:block">
               <a href="index.html"> CAkE AND BAkE</a>
             </li>
             <li class="mx-2 py-2">
-              <a class="p-2 hover:bg-yellow-300 rounded-lg" href="index.html">
+              <a
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 rounded-lg"
+                href="index.html"
+              >
                 Home
               </a>
             </li>
             <li class="mx-2 py-2">
-              <a class="p-2 hover:bg-yellow-300 rounded-lg" href="about_us.html"
+              <a
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
+                href="about_us.html"
                 >About Us</a
               >
             </li>
             <li class="mx-2 py-2">
               <a
-                class="p-2 hover:bg-yellow-300 rounded-lg"
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
                 href="cake_studio.html"
               >
                 Cake Studio
@@ -52,7 +64,7 @@
             </li>
             <li class="mx-2 py-2">
               <a
-                class="p-2 hover:bg-yellow-300 rounded-lg"
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
                 href="contact_us.html"
               >
                 Contact Us</a
@@ -63,14 +75,18 @@
 
         <div>
           <ul
-            class="lg:flex items-center justify-center font-bold xl:text-2xl lg:p-4"
+            class="lg:flex items-center justify-center font-semibold xl:text-2xl lg:p-4"
           >
             <li class="mx-2 py-2 lg:mt-6 xl:mt-4">
-              <a href="signup.html" class="p-2 hover:bg-yellow-300 rounded-lg"
+              <a
+                href="signup.html"
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
                 >Signup</a
               >
               /
-              <a href="login.html" class="p-2 hover:bg-yellow-300 rounded-lg"
+              <a
+                href="login.html"
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
                 >Login</a
               >
             </li>
@@ -80,20 +96,18 @@
       <!-- end of navbar -->
 
       <!-- hero -->
-      <section class="sm:mt-12 md:mt-0">
+      <section class="sm:mt-12 md:mt-0 hidden" id="main-content">
         <div
-          class="lg:flex justify-end me-12 items-center text-gray-900 h-full lg:text-end text-center md:pb-16"
+          class="lg:flex justify-center items-center text-gray-900 h-full text-center md:pb-16"
         >
-          <div class="mt-4">
+          <div class="mt-4 animated-img-hero">
             <h1 class="xl:text-5xl sm:text-xl font-bold mb-6">
               Welcome to
               <span class="xl:text-6xl sm:text-2xl logo-text-color">
                 CAkE AND BAkE</span
               >
             </h1>
-            <div
-              class="lg:text-2xl lg:w-96 lg:ms-auto sm:font-bold lg:font-normal"
-            >
+            <div class="lg:text-2xl sm:font-bold lg:font-normal w-full mx-auto">
               <p>Making Your Occasions Memorable. Celebrating with You.</p>
               <button
                 class="btn btn-color lg:py-4 lg:px-8 py-2 px-6 my-3 rounded-lg text-xl font-bold transition ease-in-out duration-300 hover:scale-x-110"
@@ -118,89 +132,152 @@
         <hr />
       </div>
 
-      <div class="my-12 lg:grid grid-cols-12">
-        <!-- card 1 -->
+      <div class="mt-8">
         <div
-          class="card border-2 border-black p-12 lg:col-span-4 bg-yellow-100 rounded-lg m-2 transition ease-in-out hover:translate-y-1 hover:scale-90 delay-300 duration-300 shadow-2xl"
+          class="swiffy-slider slider-item-show3 slider-nav-round slider-nav-page"
         >
-          <div class="lg:flex py-4 justify-start">
-            <img
-              height="120px"
-              width="120px"
-              src="images/user.jpg"
-              alt="profile"
-              class="rounded-lg"
-            />
-            <div class="flex flex-col justify-end">
-              <div class="text-xl p-2">Name: Mr. User</div>
-              <p class="text-xl p-2">Rating: ⭐⭐⭐</p>
-            </div>
-          </div>
-          <p class="bg-yellow-200 p-6 rounded-lg bg-opacity-80 text-black">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-            quos architecto dicta.
-          </p>
+          <ul class="slider-container">
+            <li>
+              <div
+                class="card p-12 lg:col-span-4 rounded-lg m-2 transition ease-in-out hover:translate-y-1 hover:scale-90 delay-300 duration-300 shadow-2xl"
+              >
+                <div class="lg:flex py-4 justify-start">
+                  <img
+                    height="120px"
+                    width="120px"
+                    src="images/user.jpg"
+                    alt="profile"
+                    class="rounded-lg"
+                  />
+                  <div class="flex flex-col justify-end">
+                    <div class="text-xl p-2">Name: Mr. User</div>
+                    <p class="text-xl p-2">Rating: ⭐⭐⭐</p>
+                  </div>
+                </div>
+                <p class="bg-stone-200 p-6 rounded-lg bg-opacity-80 text-black">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Impedit quos architecto dicta.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div
+                class="card p-12 lg:col-span-4 rounded-lg m-2 transition ease-in-out hover:translate-y-1 hover:scale-90 delay-300 duration-300 shadow-2xl"
+              >
+                <div class="lg:flex py-4 justify-start">
+                  <img
+                    height="120px"
+                    width="120px"
+                    src="images/user.jpg"
+                    alt="profile"
+                    class="rounded-lg"
+                  />
+                  <div class="flex flex-col justify-end">
+                    <div class="text-xl p-2">Name: Mr. User</div>
+                    <p class="text-xl p-2">Rating: ⭐⭐⭐</p>
+                  </div>
+                </div>
+                <p class="bg-stone-200 p-6 rounded-lg bg-opacity-80 text-black">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Impedit quos architecto dicta.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div
+                class="card p-12 lg:col-span-4 rounded-lg m-2 transition ease-in-out hover:translate-y-1 hover:scale-90 delay-300 duration-300 shadow-2xl"
+              >
+                <div class="lg:flex py-4 justify-start">
+                  <img
+                    height="120px"
+                    width="120px"
+                    src="images/user.jpg"
+                    alt="profile"
+                    class="rounded-lg"
+                  />
+                  <div class="flex flex-col justify-end">
+                    <div class="text-xl p-2">Name: Mr. User</div>
+                    <p class="text-xl p-2">Rating: ⭐⭐⭐</p>
+                  </div>
+                </div>
+                <p class="bg-stone-200 p-6 rounded-lg bg-opacity-80 text-black">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Impedit quos architecto dicta.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div
+                class="card p-12 lg:col-span-4 rounded-lg m-2 transition ease-in-out hover:translate-y-1 hover:scale-90 delay-300 duration-300 shadow-2xl"
+              >
+                <div class="lg:flex py-4 justify-start">
+                  <img
+                    height="120px"
+                    width="120px"
+                    src="images/user.jpg"
+                    alt="profile"
+                    class="rounded-lg"
+                  />
+                  <div class="flex flex-col justify-end">
+                    <div class="text-xl p-2">Name: Mr. User</div>
+                    <p class="text-xl p-2">Rating: ⭐⭐⭐</p>
+                  </div>
+                </div>
+                <p class="bg-stone-200 p-6 rounded-lg bg-opacity-80 text-black">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Impedit quos architecto dicta.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div
+                class="card p-12 lg:col-span-4 rounded-lg m-2 transition ease-in-out hover:translate-y-1 hover:scale-90 delay-300 duration-300 shadow-2xl"
+              >
+                <div class="lg:flex py-4 justify-start">
+                  <img
+                    height="120px"
+                    width="120px"
+                    src="images/user.jpg"
+                    alt="profile"
+                    class="rounded-lg"
+                  />
+                  <div class="flex flex-col justify-end">
+                    <div class="text-xl p-2">Name: Mr. User</div>
+                    <p class="text-xl p-2">Rating: ⭐⭐⭐</p>
+                  </div>
+                </div>
+                <p class="bg-stone-200 p-6 rounded-lg bg-opacity-80 text-black">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Impedit quos architecto dicta.
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <button
+            type="button"
+            class="slider-nav"
+            aria-label="Go left"
+          ></button>
+          <button
+            type="button"
+            class="slider-nav slider-nav-next"
+            aria-label="Go left"
+          ></button>
         </div>
-        <!-- end card1 -->
-        <!-- card2 -->
-        <div
-          class="card border-2 border-black p-12 lg:col-span-4 bg-yellow-100 rounded-lg m-2 transition ease-in-out hover:translate-y-1 hover:scale-90 delay-300 duration-300 shadow-2xl"
-        >
-          <div class="lg:flex py-4 justify-start">
-            <img
-              height="120px"
-              width="120px"
-              src="images/user.jpg"
-              alt="profile"
-              class="rounded-lg"
-            />
-            <div class="flex flex-col justify-end">
-              <div class="text-xl p-2">Name: Mr. User</div>
-              <p class="text-xl p-2">Rating: ⭐⭐⭐</p>
-            </div>
-          </div>
-          <p class="bg-yellow-200 p-6 rounded-lg bg-opacity-80 text-black">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-            quos architecto dicta.
-          </p>
-        </div>
-        <!-- end card 2 -->
-        <!-- card 3 -->
-        <div
-          class="card border-2 border-black p-12 lg:col-span-4 bg-yellow-100 rounded-lg m-2 transition ease-in-out hover:translate-y-1 hover:scale-90 delay-300 duration-300 shadow-2xl"
-        >
-          <div class="lg:flex py-4 justify-start">
-            <img
-              height="120px"
-              width="120px"
-              src="images/user.jpg"
-              alt="profile"
-              class="rounded-lg"
-            />
-            <div class="flex flex-col justify-end">
-              <div class="text-xl p-2">Name: Mr. User</div>
-              <p class="text-xl p-2">Rating: ⭐⭐⭐</p>
-            </div>
-          </div>
-          <p class="bg-yellow-200 p-6 rounded-lg bg-opacity-80 text-black">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-            quos architecto dicta.
-          </p>
-        </div>
-        <!-- end card 3 -->
       </div>
     </div>
 
     <!-- end of review -->
 
     <!-- key features -->
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-6xl mx-auto my-28">
       <h2 class="text-3xl font-bold text-center mb-6">Our Key Features</h2>
       <hr class="pb-12" />
       <div class="grid my-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Card 1 -->
         <div
-          class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center"
+          class="bg-white p-6 rounded-lg flex flex-col items-center transition ease-in-out hover:translate-y-1 hover:scale-90 delay-300 duration-300 shadow-2xl"
         >
           <div class="bg-indigo-100 p-4 rounded-full">
             <img class="h-16 w-16" src="images/order.png" alt="" />
@@ -212,7 +289,7 @@
         </div>
         <!-- Card 2 -->
         <div
-          class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center"
+          class="bg-white p-6 rounded-lg flex flex-col items-center transition ease-in-out hover:translate-y-1 hover:scale-90 delay-300 duration-300 shadow-2xl"
         >
           <div class="bg-green-100 p-4 rounded-full">
             <img class="h-16 w-16" src="images/fast-delivery.png" alt="" />
@@ -224,7 +301,7 @@
         </div>
         <!-- Card 3 -->
         <div
-          class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center"
+          class="bg-white p-6 rounded-lg flex flex-col items-center transition ease-in-out hover:translate-y-1 hover:scale-90 delay-300 duration-300 shadow-2xl"
         >
           <div class="bg-yellow-100 p-4 rounded-full">
             <img class="h-16 w-16" src="images/ingredient.png" alt="" />
@@ -239,11 +316,11 @@
     <!-- end key features -->
 
     <footer
-      class="bg-yellow-200 lg:h-1/2 sm:h-full flex flex-col justify-evenly"
+      class="bg-yellow-800 bg-opacity-80 lg:h-1/2 sm:h-full flex flex-col justify-evenly"
     >
       <div class="md:grid grid-cols-12 justify-evenly">
         <div class="col-span-4 m-auto">
-          <ul class="lg:mb-0 sm:mb-12 ms-12">
+          <ul class="lg:mb-0 sm:mb-12 ms-12 font-semibold">
             <li
               class="mt-5 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
             >
@@ -379,6 +456,12 @@
         </p>
       </div>
     </footer>
+
     <script src="app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
   </body>
 </html>

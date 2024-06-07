@@ -2,11 +2,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurant|Homepage</title>
+    <title>Cake and Bake|About Us</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+    <div id="preloader"></div>
+
     <header class="shadow-lg rounded-lg">
       <!-- navbar -->
       <div class="p-2 bg-yellow-100 bg-opacity-80">
@@ -27,24 +29,29 @@
       >
         <div>
           <ul
-            class="lg:flex items-center justify-center font-bold xl:text-2xl lg:p-4"
+            class="lg:flex items-center justify-center font-semibold xl:text-2xl lg:p-4"
           >
             <li class="mx-2 py-2 logo hidden lg:block">
               <a href="index.html"> CAkE AND BAkE</a>
             </li>
             <li class="mx-2">
-              <a class="p-2 hover:bg-yellow-300 rounded-lg" href="index.html">
+              <a
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
+                href="index.html"
+              >
                 Home
               </a>
             </li>
             <li class="mx-2 py-2">
-              <a class="p-2 hover:bg-yellow-300 rounded-lg" href="about_us.html"
+              <a
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
+                href="about_us.html"
                 >About Us</a
               >
             </li>
             <li class="mx-2 py-2">
               <a
-                class="p-2 hover:bg-yellow-300 rounded-lg"
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
                 href="cake_studio.html"
               >
                 Cake Studio
@@ -52,7 +59,7 @@
             </li>
             <li class="mx-2 py-2">
               <a
-                class="p-2 hover:bg-yellow-300 rounded-lg"
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
                 href="contact_us.html"
               >
                 Contact Us</a
@@ -63,14 +70,18 @@
 
         <div>
           <ul
-            class="lg:flex items-center justify-center font-bold xl:text-2xl lg:p-4"
+            class="lg:flex items-center justify-center font-semibold xl:text-2xl lg:p-4"
           >
             <li class="mx-2 py-2 lg:mt-6 xl:mt-4">
-              <a href="signup.html" class="p-2 hover:bg-yellow-300 rounded-lg"
+              <a
+                href="signup.html"
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
                 >Signup</a
               >
               /
-              <a href="login.html" class="p-2 hover:bg-yellow-300 rounded-lg"
+              <a
+                href="login.html"
+                class="p-2 transition ease-in-out delay-300 duration-300 hover:bg-yellow-300 hover:bg-yellow-300 rounded-lg"
                 >Login</a
               >
             </li>
@@ -81,18 +92,22 @@
     </header>
 
     <!-- about  -->
-    <section>
+    <section id="main-content" class="hidden">
       <h1 class="text-center font-bold text-4xl p-5 logo pb-12">Our Story</h1>
       <!-- section 1 -->
       <div class="m-6 lg:grid grid-cols-12 gap-4 justify-center items-center">
-        <div class="p-4 col-span-4 text-center">
+        <div
+          class="p-4 col-span-4 text-center transition ease-in-out duration-300 delay-300 hover:border-black hover:drop-shadow-2xl"
+        >
           <img
-            class="h-80 w-96 lg:ms-auto sm:mx-auto sm:ms-o rounded-lg border-2 border-yellow-200"
+            class="h-80 w-96 lg:ms-auto sm:mx-auto sm:ms-o rounded-lg border-2 border-yellow-200 animated-img-about"
             src="images/about1.jpg"
             alt=""
           />
         </div>
-        <div class="p-4 col-span-8 text-start">
+        <div
+          class="p-4 col-span-8 text-start mt-12 rounded-xl transition ease-in-out duration-300 delay-300 hover:bg-stone-100"
+        >
           <h1 class="font-bold text-xl text-center mt-12">
             How we Started this Journey
           </h1>
@@ -124,7 +139,9 @@
       <div
         class="m-6 pt-24 lg:grid grid-cols-12 gap-4 justify-center items-center"
       >
-        <div class="p-4 col-span-8 text-start">
+        <div
+          class="p-4 col-span-8 text-start mt-12 rounded-xl transition ease-in-out duration-300 delay-300 hover:bg-stone-100"
+        >
           <h1 class="font-bold text-xl text-center mt-12">
             What makes us Unique?
           </h1>
@@ -150,9 +167,11 @@
             Dignissimos culpa placeat numquam.
           </p>
         </div>
-        <div class="p-4 col-span-4 text-center">
+        <div
+          class="p-4 col-span-4 text-center transition ease-in-out duration-300 delay-300 hover:border-black hover:drop-shadow-2xl"
+        >
           <img
-            class="h-80 w-96 lg:ms-auto sm:mx-auto sm:ms-o rounded-lg border-2 border-yellow-200"
+            class="h-80 w-96 lg:ms-auto sm:mx-auto sm:ms-o rounded-lg border-2 border-yellow-200 animated-img-about"
             src="images/about2.jpg"
             alt=""
           />
@@ -160,8 +179,10 @@
       </div>
       <!-- end of section 2 -->
       <!-- section 3 -->
-      <div class="pt-12 m-6 lg:grid grid-cols-3 gap-4">
-        <div class="p-6">
+      <div class="pt-12 mx-12 lg:grid grid-cols-3 gap-12 my-24">
+        <div
+          class="p-6 border-2 rounded-xl transition ease-in-out duration-300 delay-300 hover:border-gray-400 hover:bg-stone-200"
+        >
           <iframe
             class="w-full lg:h-86 md:h-96 sm:h-32 rounded-xl"
             src="https://www.youtube.com/embed/7h6Vjd8z_7E?si=1r3qCrpCuhGFtUSG"
@@ -172,9 +193,12 @@
             allowfullscreen
           ></iframe>
         </div>
-        <div class="p-6">
+
+        <div
+          class="p-6 border-2 rounded-xl transition ease-in-out duration-300 delay-300 hover:border-gray-400 hover:bg-stone-200"
+        >
           <iframe
-            class="w-full md:h-96 sm:h-32 rounded-xl"
+            class="w-full lg:h-86 md:h-96 sm:h-32 rounded-xl"
             src="https://www.youtube.com/embed/7h6Vjd8z_7E?si=1r3qCrpCuhGFtUSG"
             title="YouTube video player"
             frameborder="0"
@@ -183,9 +207,12 @@
             allowfullscreen
           ></iframe>
         </div>
-        <div class="p-6">
+
+        <div
+          class="p-6 border-2 rounded-xl transition ease-in-out duration-300 delay-300 hover:border-gray-400 hover:bg-stone-200"
+        >
           <iframe
-            class="w-full md:h-96 sm:h-32 rounded-xl"
+            class="w-full lg:h-86 md:h-96 sm:h-32 rounded-xl"
             src="https://www.youtube.com/embed/7h6Vjd8z_7E?si=1r3qCrpCuhGFtUSG"
             title="YouTube video player"
             frameborder="0"
@@ -197,14 +224,16 @@
       </div>
       <!-- end of section 3 -->
       <!-- section 4 -->
-      <div class="pt-12 m-6 lg:grid grid-cols-4 gap-4">
+      <div class="pt-12 mx-12 my-24 lg:grid grid-cols-4 gap-8">
         <div class="p-6">
-          <h1 class="font-bold text-2xl text-center lg:text-left">
+          <h1 class="font-bold text-2xl text-center lg:text-center">
             AWARDS & <br />
             RECONGNITION
           </h1>
         </div>
-        <div class="p-6 text-center">
+        <div
+          class="p-6 text-center rounded-xl my-auto transition ease-in-out duration-300 delay-300 hover:shadow-2xl"
+        >
           <h1 class="font-bold text-2xl">
             2015
             <hr />
@@ -212,7 +241,9 @@
             <span> Daily Star Foodiez Choice Award </span>
           </h1>
         </div>
-        <div class="p-6 text-center">
+        <div
+          class="p-6 text-center rounded-xl my-auto transition ease-in-out duration-300 delay-300 hover:shadow-2xl"
+        >
           <h1 class="font-bold text-2xl">
             2016
             <hr />
@@ -220,7 +251,9 @@
             <span> Coca-Cola Foodiez Choice Award </span>
           </h1>
         </div>
-        <div class="p-6 text-center">
+        <div
+          class="p-6 text-center rounded-xl my-auto transition ease-in-out duration-300 delay-300 hover:shadow-2xl"
+        >
           <h1 class="font-bold text-2xl">
             2018
             <hr />
@@ -235,11 +268,11 @@
     <!-- end of about -->
 
     <footer
-      class="bg-yellow-200 lg:h-1/2 sm:h-full flex flex-col justify-evenly"
+      class="bg-yellow-800 bg-opacity-80 lg:h-1/2 sm:h-full flex flex-col justify-evenly"
     >
       <div class="md:grid grid-cols-12 justify-evenly">
         <div class="col-span-4 m-auto">
-          <ul class="lg:mb-0 sm:mb-12 ms-12">
+          <ul class="lg:mb-0 sm:mb-12 ms-12 font-semibold">
             <li
               class="mt-5 transition ease-in-out hover:translate-x-1 hover:scale-105 hover:delay-75"
             >
