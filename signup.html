@@ -68,7 +68,7 @@
           </ul>
         </div>
 
-        <div>
+        <div id="authLinks">
           <ul
             class="lg:flex items-center justify-center font-semibold xl:text-2xl lg:p-4"
           >
@@ -97,48 +97,52 @@
         class="lg:m-24 m-4 p-8 lg:p-12 rounded-lg xl:grid grid-cols-12 shadow-xl"
       >
         <div class="col-span-6 my-auto">
-          <form action="" class="">
+          <div class="text-center text-xl p-5 font-semibold text-green-500" id="registration_msg"></div>
+          <form action="" id="registrationForm" onsubmit="handleRegistration(event)">
             <h1 class="text-center font-bold text-3xl">Signup Now</h1>
             <hr class="mt-8" />
             <div class="m-3 text-black">
               <label
                 class="block text-black font-bold mb-3 ms-2 text-xl"
-                for="name"
+                for="username"
                 >Username</label
               >
               <input
                 type="text"
-                name="name"
+                name="username"
+                id="username"
                 class="w-full block border border-gray-300 hover:border-gray-600 p-3 rounded-md"
-                placeholder="Enter Your Name"
+                placeholder="Enter Your Username"
                 required
               />
             </div>
             <div class="m-3 text-black">
               <label
                 class="block text-black font-bold mb-3 ms-2 text-xl"
-                for="name"
+                for="firstname"
                 >First Name</label
               >
               <input
                 type="text"
-                name="name"
+                name="firstname"
+                id="firstname"
                 class="w-full block border border-gray-300 hover:border-gray-600 p-3 rounded-md"
-                placeholder="Enter Your Name"
+                placeholder="Enter Your First Name"
                 required
               />
             </div>
             <div class="m-3 text-black">
               <label
                 class="block text-black font-bold mb-3 ms-2 text-xl"
-                for="name"
+                for="lastname"
                 >Last Name</label
               >
               <input
                 type="text"
-                name="name"
+                name="lastname"
+                id="lastname"
                 class="w-full block border border-gray-300 hover:border-gray-600 p-3 rounded-md"
-                placeholder="Enter Your Name"
+                placeholder="Enter Your Last Name"
                 required
               />
             </div>
@@ -151,6 +155,7 @@
               <input
                 type="email"
                 name="email"
+                id="email"
                 class="w-full block border border-gray-300 hover:border-gray-600 p-3 rounded-md"
                 placeholder="Enter Your Email"
                 required
@@ -165,6 +170,7 @@
               <input
                 type="password"
                 name="password"
+                id="password"
                 class="w-full block border border-gray-300 hover:border-gray-600 p-3 rounded-md"
                 placeholder="Enter Your Password"
                 required
@@ -180,6 +186,7 @@
               <input
                 type="password"
                 name="password"
+                id="confirm_password"
                 class="w-full block border border-gray-300 hover:border-gray-600 p-3 rounded-md"
                 placeholder="Confirm Your Password"
                 required
