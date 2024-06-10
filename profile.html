@@ -91,9 +91,29 @@
       <!-- end of navbar -->
     </header>
 
-    <!-- profile  -->
-    <h1>Profile</h1>
-    <!-- end of profile -->
+    <!-- user profile  -->
+    <div id="userProfile">
+      <h1 class="text-center text-xl font-semi-bold md:mt-32 mt-12 mx-4">
+        All the items You Purchased So Far!
+      </h1>
+      <hr />
+      <ul id="purchase-list" class="m-0 md:m-32"></ul>
+    </div>
+
+    <!-- end of user profile -->
+    <!-- admin profile -->
+    <div class="mx-24 my-12">
+      <h1 class="text-3xl font-semibold text-center mt-12 mb-4">Welcome to Admin Panel</h1>
+      <hr  class="mb-12"/>
+
+      <div class="grid grid-cols-12">
+        <div class="col-span-4 w-full h-screen bg-stone-400">sidebar</div>
+        <div class="col-span-8 w-full h-screen bg-stone-200">
+          items modifications
+        </div>
+      </div>
+    </div>
+    <!-- end admin profile -->
 
     <footer
       class="bg-yellow-800 bg-opacity-80 lg:h-1/2 sm:h-full flex flex-col justify-evenly"

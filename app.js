@@ -87,7 +87,7 @@ const handleRegistration = (event) => {
     email: email,
   };
 
-  fetch('https://cake-shop-uc4x.onrender.com/user/signup/', {
+  fetch('http://127.0.0.1:8000/user/signup/', {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     'X-CSRFToken': getCookie('csrftoken'),
@@ -133,7 +133,7 @@ const handleLogin = (event) => {
   };
 
   if ((username, password)) {
-    fetch('https://cake-shop-uc4x.onrender.com/user/login/', {
+    fetch('http://127.0.0.1:8000/user/login/', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(info),
@@ -173,7 +173,7 @@ const handleLogin = (event) => {
 const handleLogout = () => {
   var token = localStorage.getItem('token');
 
-  fetch('https://cake-shop-uc4x.onrender.com/user/logout/', {
+  fetch('http://127.0.0.1:8000/user/logout/', {
     method: 'POST',
     headers: {
       Authorization: `Token ${token}`,
@@ -194,6 +194,8 @@ const handleLogout = () => {
 
 function showCards(data) {
   const container = document.getElementById('cake-container');
+  var buttonHidden = '';
+  if (userId == 2) var buttonHidden = 'hidden';
   container.innerHTML = '';
   data.forEach((ele) => {
     const delivery_txt =
@@ -243,7 +245,7 @@ function showCards(data) {
               </select>
             </div>
             <button
-              class="btn border border-black rounded my-3 px-4 py-2 font-bold transition ease-in-out duration-300 hover:scale-x-90"
+              class="btn ${buttonHidden} border border-black rounded my-3 px-4 py-2 font-bold transition ease-in-out duration-300 hover:scale-x-90"
               onclick="PurchaseCake(event, ${ele.id})"
             >
               <a href="">
@@ -258,7 +260,7 @@ function showCards(data) {
 }
 
 function fetchAllCakeItems() {
-  fetch('https://cake-shop-uc4x.onrender.com/cake/list/', {
+  fetch('http://127.0.0.1:8000/cake/list/', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -279,7 +281,6 @@ function fetchAllCakeItems() {
 
 function PurchaseCake(event, cardId) {
   event.preventDefault();
-
   if (userId) {
     const card = document.getElementById(`cardEle-${cardId}`);
     const cake = card.getAttribute('data-id');
@@ -291,7 +292,7 @@ function PurchaseCake(event, cardId) {
       cake_size: size,
     };
 
-    fetch('https://cake-shop-uc4x.onrender.com/purchase/create/', {
+    fetch('http://127.0.0.1:8000/purchase/create/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -302,6 +303,7 @@ function PurchaseCake(event, cardId) {
       .then((response) => {
         if (response.ok) {
           alert('Item Purchased successfully!');
+          window.location.href = 'profile.html';
         } else {
           alert('Something went wrong');
         }
@@ -309,5 +311,63 @@ function PurchaseCake(event, cardId) {
       .catch((error) => console.error('Error:', error));
   } else {
     alert('Please Login To purchase the item!');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  fetchProfileData();
+});
+
+function fetchProfileData() {
+  const role = localStorage.getItem('role');
+  if (userId && role != 'admin') {
+    fetch(`http://127.0.0.1:8000/purchase/list/?userId=${userId}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': getCookie('csrftoken'),
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          alert('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        // console.log(data);
+        const parent = document.getElementById('purchase-list');
+        data.forEach((element) => {
+          if (element.cake_size == 1) cake_size = 'Small (1kg)';
+          else if (element.cake_size == 2) cake_size = 'Medium (1.5kg)';
+          else cake_size = 'Large (2kg)';
+
+          var cake_name = element.cake;
+          const item = document.createElement('li');
+          item.innerHTML = `
+        <li class="bg-white border-b border-gray-300 py-4 px-6">
+          <div class="lg:flex justify-between ">
+            <span><a href = ''> Product No: ${cake_name} </a></span>
+            <span><p class="text-yellow-600 text-xl">Status: ${element.status}</p></span>
+            <span class="text-xl text-gray-900 font-bold">
+            <div>
+            ${cake_size}
+            </div>
+
+            </span>
+            <span class="text-2xl font-semibold text-green-900"> Total Price: ${element.total_price}</span>
+
+          </div>
+        </li>`;
+
+          parent.appendChild(item);
+        });
+      })
+      .catch((error) => {
+        console.error('Error fetching recipes:', error);
+      });
+  } else if (userId && role == 'admin') {
+    userProfile = document.getElementById('userProfile');
+    userProfile.style.display = 'none';
   }
 }
