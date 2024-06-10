@@ -87,7 +87,7 @@ const handleRegistration = (event) => {
     email: email,
   };
 
-  fetch('http://127.0.0.1:8000/user/signup/', {
+  fetch('https://cake-shop-uc4x.onrender.com/user/signup/', {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     'X-CSRFToken': getCookie('csrftoken'),
@@ -133,7 +133,7 @@ const handleLogin = (event) => {
   };
 
   if ((username, password)) {
-    fetch('http://127.0.0.1:8000/user/login/', {
+    fetch('https://cake-shop-uc4x.onrender.com/user/login/', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(info),
@@ -173,7 +173,7 @@ const handleLogin = (event) => {
 const handleLogout = () => {
   var token = localStorage.getItem('token');
 
-  fetch('http://127.0.0.1:8000/user/logout/', {
+  fetch('https://cake-shop-uc4x.onrender.com/user/logout/', {
     method: 'POST',
     headers: {
       Authorization: `Token ${token}`,
@@ -260,7 +260,7 @@ function showCards(data) {
 }
 
 function fetchAllCakeItems() {
-  fetch('http://127.0.0.1:8000/cake/list/', {
+  fetch('https://cake-shop-uc4x.onrender.com/cake/list/', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -292,7 +292,7 @@ function PurchaseCake(event, cardId) {
       cake_size: size,
     };
 
-    fetch('http://127.0.0.1:8000/purchase/create/', {
+    fetch('https://cake-shop-uc4x.onrender.com/purchase/create/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -321,13 +321,16 @@ document.addEventListener('DOMContentLoaded', () => {
 function fetchProfileData() {
   const role = localStorage.getItem('role');
   if (userId && role != 'admin') {
-    fetch(`http://127.0.0.1:8000/purchase/list/?userId=${userId}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-CSRFToken': getCookie('csrftoken'),
-      },
-    })
+    fetch(
+      `https://cake-shop-uc4x.onrender.com/purchase/list/?userId=${userId}`,
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': getCookie('csrftoken'),
+        },
+      }
+    )
       .then((response) => {
         if (!response.ok) {
           alert('Network response was not ok');
