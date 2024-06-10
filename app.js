@@ -371,6 +371,8 @@ function fetchProfileData() {
       });
   } else if (userId && role == 'admin') {
     userProfile = document.getElementById('userProfile');
+    adminProfile = document.getElementById('adminProfile');
     userProfile.style.display = 'none';
+    adminProfile.style.display = 'block';
   }
 }
